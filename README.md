@@ -12,10 +12,10 @@ This script builds on the excellent [rpitx](https://github.com/F5OEO/rpitx) soft
 ## Configuration
 In order to run the script, you will need to make a couple of changes.
 * Edit the script (`sudo nano /usr/local/bin/pager`)
-  * At line 11, change the seven-digit number to your RIC/CAP-code
-  * Also on line 11, ensure you have the correct location for the `rpitx pocsag` software
-  * The `-f` flag on line 11 is the frequency to transmit on. It is set to 439.9875MHz (the defaut pager frequency for amateur radio in the UK) - but you can change this to any frequency. *Be sure to only transmit on frequencies you are either licensed for, or which are license-free!* It is your responsibility to stay within the law.
-  * Line 13 is the confirmation message which you can change to your choosing.
+  * Edit `RIC` (line 5) to your RIC code (obtained from DAPNET)
+  * Edit `FREQ` (line 6) to the chosen frequency (Make sure you abide by local laws/licence conditions)
+  * Edit `pocsagLocation` (line 7) to wherever rpitx is installed
+  * Edit `CALLSIGN` (line 8) to your callsign for confirmation
 
 ## Usage
 To run the script, simply type `pager` at the command line. Doing this will display the help information.
