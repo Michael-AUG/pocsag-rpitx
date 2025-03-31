@@ -1,13 +1,25 @@
 #!/bin/bash
+# Michael Topple GM5AUG
+
+#Config values
+RIC=1234567 #Your RIC - get this from DAPNET and program your pager accordingly
+FREQ=439987500 #Frequency in Hz
+pocsagLocation=/home/pi/rpitx/pocsag #This is where you have installed rpitx
+CALLSIGN=GM5AUG #Your callsign for the confirmation
+
+
 #Checks for message
 if [ -z "$1" ]; then
     echo "Error: No message provided."
     echo "Usage: pager \"Your message here\" [repeat_count]"
     exit 1
 fi
+
 #Sets repeat count
 REPEAT=${2:-1}
+
 #Sends message
-echo "0356734:$1"|sudo /home/gm5aug/rpitx/pocsag -f 439987500 -r 1200 -b 0 -t $REPEAT > /dev/null 2>&1
+echo "$RIC:$1"|sudo $pocsagLocation -f 439987500 -r 1200 -b 0 -t $REPEAT > /dev/null 2>&1
+
 #Reports sent
-echo "Sent to GM5AUG ($REPEAT time(s))"
+echo "Sent to $CALLSIGN ($REPEAT time(s))"
