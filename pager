@@ -1,0 +1,13 @@
+#!/bin/bash
+#Checks for message
+if [ -z "$1" ]; then
+    echo "Error: No message provided."
+    echo "Usage: pager \"Your message here\" [repeat_count]"
+    exit 1
+fi
+#Sets repeat count
+REPEAT=${2:-1}
+#Sends message
+echo "0356734:$1"|sudo /home/gm5aug/rpitx/pocsag -f 439987500 -r 1200 -b 0 -t $REPEAT > /dev/null 2>&1
+#Reports sent
+echo "Sent to GM5AUG ($REPEAT time(s))"
