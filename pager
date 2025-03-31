@@ -19,7 +19,7 @@ fi
 REPEAT=${2:-1}
 
 #Sends message
-echo "$RIC:$1"|sudo $pocsagLocation -f 439987500 -r 1200 -b 0 -t $REPEAT > /dev/null 2>&1
+echo "$RIC:$1" "de $CALLSIGN"|sudo $pocsagLocation -f 439987500 -r 1200 -b 0 -t $REPEAT > /dev/null 2>&1
 
 #Reports sent
 echo "Sent to $CALLSIGN ($REPEAT time(s))"
