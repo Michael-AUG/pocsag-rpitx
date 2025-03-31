@@ -5,9 +5,9 @@ Script to automate sending POCSAG messages using rpitx
 This script builds on the excellent [rpitx](https://github.com/F5OEO/rpitx) software created by F5OEO, and offers a simple way to automate sending POCSAG (PAGER) messages using his software.
 
 ## Installation
-`git clone https://github.com/Michael-AUG/pocsag-rpitx`
-`cd pocsag-rpitx`
-`sudo mv ./pager /usr/local/bin`
+* `git clone https://github.com/Michael-AUG/pocsag-rpitx`
+* `cd pocsag-rpitx`
+* `sudo mv ./pager /usr/local/bin`
 
 ## Configuration
 In order to run the script, you will need to make a couple of changes.
@@ -19,6 +19,7 @@ In order to run the script, you will need to make a couple of changes.
 
 ## Usage
 To run the script, simply type `pager` at the command line. Doing this will display the help information.
+
 Ordinarily you would type `pager "{messageHere}"` and press return, and the message would send.
 
 I hope you find this script helpful, and that it saves you time.
